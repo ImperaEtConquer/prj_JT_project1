@@ -1,7 +1,9 @@
 package ua.training.project1.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
+import ua.training.project1.controller.subcontrollers.ComparatorController;
 import ua.training.project1.model.entities.Car;
 
 public class TaxiStation {
@@ -24,22 +26,25 @@ public class TaxiStation {
 		double totalprice = 0;
 
 		for (Car car : cars) {
-			// TODO
+			totalprice += car.getPrice();
 		}
 
 		return totalprice;
 	}
 
 	public void sortByFuelConsumption() {
+		Collections.sort(cars, new ComparatorController());
 	}
 
 	public ArrayList<Car> getCarListByParams(double minVelocity, double maxVelocity) {
-
 		ArrayList<Car> foundCars = new ArrayList<Car>();
-
+		
 		for (Car car : cars) {
-			// TODO
+			if (car.getVelocity() >= minVelocity && car.getVelocity() <= maxVelocity) {
+				foundCars.add(car);
+			}
 		}
+
 		return foundCars;
 	}
 }

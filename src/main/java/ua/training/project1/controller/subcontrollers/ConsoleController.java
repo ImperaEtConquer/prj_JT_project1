@@ -1,4 +1,4 @@
-package ua.training.project1.controller;
+package ua.training.project1.controller.subcontrollers;
 
 import java.util.Scanner;
 
