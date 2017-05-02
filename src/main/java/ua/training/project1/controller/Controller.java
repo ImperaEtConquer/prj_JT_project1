@@ -20,8 +20,8 @@ public class Controller {
 	public void processUser() {
 		Scanner sc = new Scanner(System.in);
 		ConsoleController consoleController = new ConsoleController(sc, view);
-		ModelController modelController = new ModelController(consoleController);
-		modelController.start();
+		ModelController modelController = new ModelController(consoleController, model);
+		modelController.process();
 	}
 
 }
