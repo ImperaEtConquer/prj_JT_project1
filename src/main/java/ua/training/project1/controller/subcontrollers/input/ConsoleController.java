@@ -1,4 +1,4 @@
-package ua.training.project1.controller.subcontrollers;
+package ua.training.project1.controller.subcontrollers.input;
 
 import java.util.Scanner;
 
@@ -14,11 +14,11 @@ public class ConsoleController {
 		this.view = view;
 	}
 
-	public String getUserString(String regex) {
+	public String getString(String regex) {
 		String result;
 		
 		while (!(sc.hasNext() && (result = sc.next()).matches(regex))) {
-			// TODO
+			view.printErrorMessage();
 		}
 		return result;
 	}

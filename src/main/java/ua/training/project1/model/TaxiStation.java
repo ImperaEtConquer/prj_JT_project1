@@ -3,12 +3,12 @@ package ua.training.project1.model;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import ua.training.project1.controller.subcontrollers.ComparatorController;
+import ua.training.project1.controller.subcontrollers.model.ComparatorController;
 import ua.training.project1.model.entities.Car;
 
 public class TaxiStation {
 
-	ArrayList<Car> cars;
+	private ArrayList<Car> cars;
 
 	public ArrayList<Car> getCars() {
 		return cars;
@@ -38,7 +38,7 @@ public class TaxiStation {
 
 	public ArrayList<Car> getCarListByParams(double minVelocity, double maxVelocity) {
 		ArrayList<Car> foundCars = new ArrayList<Car>();
-		
+
 		for (Car car : cars) {
 			if (car.getVelocity() >= minVelocity && car.getVelocity() <= maxVelocity) {
 				foundCars.add(car);

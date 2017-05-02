@@ -6,6 +6,13 @@ public abstract class Car {
 	private double velocity;
 	private double price;
 
+	public Car(Model model, double fuelConsumption, double velocity, double price) {
+		this.model = model;
+		this.fuelConsumption = fuelConsumption;
+		this.velocity = velocity;
+		this.price = price;
+	}
+
 	public double getPrice() {
 		return price;
 	}
@@ -21,9 +28,5 @@ public abstract class Car {
 	public Model getModel() {
 		return model;
 	}
-	
-	@Override
-	public String toString() {
-		return model.toString();
-	}
+
 }

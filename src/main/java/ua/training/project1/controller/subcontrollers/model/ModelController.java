@@ -1,14 +1,14 @@
-package ua.training.project1.controller.subcontrollers;
+package ua.training.project1.controller.subcontrollers.model;
 
+import ua.training.project1.controller.subcontrollers.input.ConsoleController;
 import ua.training.project1.model.TaxiStation;
-import ua.training.project1.model.entities.Car;
 import ua.training.project1.view.View;
 
 public class ModelController {
 
-	View view;
-	TaxiStation model;
-	ConsoleController consoleController;
+	private View view;
+	private TaxiStation model;
+	private ConsoleController consoleController;
 
 	public ModelController(ConsoleController consoleController, TaxiStation model) {
 		this.consoleController = consoleController;
@@ -17,10 +17,9 @@ public class ModelController {
 	}
 
 	public void process() {
+		view.printMessage(View.WELCOME);
+		consoleController.getString("");	//TODO REGEX
+		model.addCar(null);
+	}
 
-	}
-	
-	private Car buildCar() {
-		return null;
-	}
 }
