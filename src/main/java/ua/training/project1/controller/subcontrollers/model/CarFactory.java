@@ -3,7 +3,7 @@ package ua.training.project1.controller.subcontrollers.model;
 import java.util.Random;
 
 import ua.training.project1.model.entities.BusinessCar;
-import ua.training.project1.model.entities.Car;
+import ua.training.project1.model.entities.Vehicle;
 import ua.training.project1.model.entities.FamilyCar;
 import ua.training.project1.model.entities.MiniCar;
 import ua.training.project1.model.entities.Model;
@@ -11,11 +11,11 @@ import ua.training.project1.view.View;
 
 class CarFactory {
 
-	Car createCar() {
+	Vehicle createCar() {
 		return createCar(getRandomType());
 	}
 
-	private Car createCar(String type) {
+	private Vehicle createCar(String type) {
 
 		Model model = getRandomModelValue();
 		double fuelConsumption = getRandomDoubleValue(View.DATA_MIN_FUEL, View.DATA_MAX_FUEL);

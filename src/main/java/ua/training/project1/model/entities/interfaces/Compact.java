@@ -1,6 +1,6 @@
 package ua.training.project1.model.entities.interfaces;
 
-public interface Compact extends Class{
+public interface Compact extends PassengerCar{
 	@Override
 	default int getCapacity() {
 		return COMPACT_CAPACITY;

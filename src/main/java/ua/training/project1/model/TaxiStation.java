@@ -4,28 +4,32 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import ua.training.project1.controller.subcontrollers.model.ComparatorController;
-import ua.training.project1.model.entities.Car;
+import ua.training.project1.model.entities.Vehicle;
 
 public class TaxiStation {
 
-	private ArrayList<Car> cars;
+	private ArrayList<Vehicle> cars;
+	
+	public TaxiStation() {
+		cars = new ArrayList<>();
+	}
 
-	public ArrayList<Car> getCars() {
+	public ArrayList<Vehicle> getCars() {
 		return cars;
 	}
 
-	public void addCar(Car car) {
+	public void addCar(Vehicle car) {
 		cars.add(car);
 	}
 
-	public void removeCar(Car car) {
+	public void removeCar(Vehicle car) {
 		cars.remove(car);
 	}
 
 	public double getTotalPrice() {
 		double totalprice = 0;
 
-		for (Car car : cars) {
+		for (Vehicle car : cars) {
 			totalprice += car.getPrice();
 		}
 
@@ -36,10 +40,10 @@ public class TaxiStation {
 		Collections.sort(cars, new ComparatorController());
 	}
 
-	public ArrayList<Car> getCarListByParams(double minVelocity, double maxVelocity) {
-		ArrayList<Car> foundCars = new ArrayList<Car>();
+	public ArrayList<Vehicle> getCarListByParams(double minVelocity, double maxVelocity) {
+		ArrayList<Vehicle> foundCars = new ArrayList<Vehicle>();
 
-		for (Car car : cars) {
+		for (Vehicle car : cars) {
 			if (car.getVelocity() >= minVelocity && car.getVelocity() <= maxVelocity) {
 				foundCars.add(car);
 			}

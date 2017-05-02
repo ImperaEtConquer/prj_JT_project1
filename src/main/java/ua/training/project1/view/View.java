@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 import ua.training.project1.model.TaxiStation;
-import ua.training.project1.model.entities.Car;
+import ua.training.project1.model.entities.Vehicle;
 
 public class View {
 	private static final String MESSAGES_BUNDLE_NAME = "resources/messages";
@@ -37,7 +37,7 @@ public class View {
 	public static final String REGEX_TYPE_MINI = regExBundle.getString("cars.type.mini");
 
 	public void printAllCars(TaxiStation taxiStation) {
-		for (Car car : taxiStation.getCars()) {
+		for (Vehicle car : taxiStation.getCars()) {
 			printMessage(car.toString());
 		}
 	}

@@ -1,12 +1,12 @@
 package ua.training.project1.model.entities;
 
-public abstract class Car {
+public abstract class Vehicle {
 	private Model model;
 	private double fuelConsumption;
 	private double velocity;
 	private double price;
 
-	public Car(Model model, double fuelConsumption, double velocity, double price) {
+	public Vehicle(Model model, double fuelConsumption, double velocity, double price) {
 		this.model = model;
 		this.fuelConsumption = fuelConsumption;
 		this.velocity = velocity;
@@ -27,6 +27,10 @@ public abstract class Car {
 
 	public Model getModel() {
 		return model;
+	}
+	
+	public String getInfo() {
+		return new StringBuilder().append(model).append(fuelConsumption).append(velocity).append(price).toString();
 	}
 
 }
