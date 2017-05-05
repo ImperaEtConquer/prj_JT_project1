@@ -9,13 +9,13 @@ import ua.training.project1.model.entities.MiniCar;
 import ua.training.project1.model.entities.Model;
 import ua.training.project1.view.View;
 
-class CarFactory {
+public class CarFactory {
 
-	Vehicle createCar() {
+	Vehicle createCar() throws Exception {
 		return createCar(getRandomType());
 	}
 
-	private Vehicle createCar(String type) {
+	private Vehicle createCar(String type) throws Exception {
 
 		Model model = getRandomModelValue();
 		double fuelConsumption = getRandomDoubleValue(View.DATA_MIN_FUEL, View.DATA_MAX_FUEL);
@@ -31,12 +31,14 @@ class CarFactory {
 		if (type.equals(View.REGEX_TYPE_MINI)) {
 			return new MiniCar(model, fuelConsumption, velocity, price);
 		}
-
-		return null;
+		else {
+			throw new Exception();
+		}
+		
 
 	}
 
-	private String getRandomType() {
+	private String getRandomType() throws Exception {
 		int randomValue = new Random().nextInt(3);
 
 		switch (randomValue) {
@@ -47,7 +49,7 @@ class CarFactory {
 		case 2:
 			return View.REGEX_TYPE_MINI;
 		default:
-			return null;
+			throw new Exception();
 		}
 	}
 

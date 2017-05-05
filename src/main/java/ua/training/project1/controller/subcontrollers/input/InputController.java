@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 import ua.training.project1.view.View;
 
-public class ConsoleController {
+public class InputController {
 
 	Scanner sc;
 	View view;
 
-	public ConsoleController(Scanner sc, View view) {
+	public InputController(Scanner sc, View view) {
 		this.sc = sc;
 		this.view = view;
 	}

@@ -28,9 +28,5 @@ public abstract class Vehicle {
 	public Model getModel() {
 		return model;
 	}
-	
-	public String getInfo() {
-		return new StringBuilder().append(model).append(fuelConsumption).append(velocity).append(price).toString();
-	}
 
 }

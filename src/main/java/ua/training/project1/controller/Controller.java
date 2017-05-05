@@ -2,7 +2,7 @@ package ua.training.project1.controller;
 
 import java.util.Scanner;
 
-import ua.training.project1.controller.subcontrollers.input.ConsoleController;
+import ua.training.project1.controller.subcontrollers.input.InputController;
 import ua.training.project1.controller.subcontrollers.model.ModelController;
 import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
@@ -19,8 +19,8 @@ public class Controller {
 	
 	public void processUser() {
 		Scanner sc = new Scanner(System.in);
-		ConsoleController consoleController = new ConsoleController(sc, view);
-		ModelController modelController = new ModelController(consoleController, model);
+		InputController inputController = new InputController(sc, view);
+		ModelController modelController = new ModelController(inputController, model);
 		modelController.process();
 	}
 
