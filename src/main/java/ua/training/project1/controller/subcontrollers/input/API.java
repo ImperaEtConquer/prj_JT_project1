@@ -2,6 +2,8 @@ package ua.training.project1.controller.subcontrollers.input;
 
 import ua.training.project1.controller.subcontrollers.model.CarFactory;
 import ua.training.project1.model.TaxiStation;
+import ua.training.project1.view.GlobalConstants;
+import ua.training.project1.view.Symbols;
 import ua.training.project1.view.View;
 
 public class API {
@@ -19,29 +21,23 @@ public class API {
 	}
 
 	public void setState() {
-		String value = inputController.getString("[0-9]");
-		if (value.equals("1")) {
+		String userInput = inputController.getString(View.REGEX_MENU);
+		if (userInput.equals(GlobalConstants.MENU_ADD)) {
 			this.state = new AddRandomCarState(taxiStation, carFactory, view);
-		}
-		else if (value.equals("2")) {
+		} else if (userInput.equals(GlobalConstants.MENU_SORT)) {
 			this.state = new SortByFuelState(taxiStation, view);
-		}
-		else if (value.equals("3")) {
+		} else if (userInput.equals(GlobalConstants.MENU_PRINT)) {
 			this.state = new PrintAllCarsState(taxiStation, view);
-		}
-		else if (value.equals("4")) {
+		} else if (userInput.equals(GlobalConstants.MENU_RESET)) {
 			this.state = new ResetState(taxiStation, view);
-		}
-		else if (value.equals("5")) {
-			this.state = new SortByFuelState(taxiStation, view);
-		}
-		else if (value.equals("6")) {
-			this.state = new SortByFuelState(taxiStation, view);
-		}
-		else if (value.equals("0")) {
+		} else if (userInput.split(Symbols.SPACE_SYMBOL).length == GlobalConstants.PARAMETERS_LENGTH) {
+			this.state = new FindBySpeedState(taxiStation, view, userInput);
+		} else if (userInput.equals(GlobalConstants.MENU_PRICE)) {
+			this.state = new GetTotalPriceState(taxiStation, view);
+		} else if (userInput.equals(GlobalConstants.MENU_EXIT)) {
 			this.state = new ExitState();
 		} else {
-			view.printErrorMessage(); // TODO bundle
+			view.printErrorMessage(View.SYSTEM_WRONGINPUT);
 		}
 	}
 

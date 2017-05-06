@@ -15,7 +15,7 @@ public class PrintAllCarsState implements State {
 
 	@Override
 	public void execute() {
-		view.printAllCars(taxiStation);
+		view.printCars(taxiStation.getCars());
 	}
 
 }

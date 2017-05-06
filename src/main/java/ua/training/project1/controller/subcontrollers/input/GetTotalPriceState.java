@@ -15,7 +15,7 @@ public class GetTotalPriceState implements State {
 
 	@Override
 	public void execute() {
-		view.printMessage("" + taxiStation.getTotalPrice()); //TODO redo
+		view.printMessage("" + taxiStation.getTotalPrice()); // TODO redo
 	}
 
 }

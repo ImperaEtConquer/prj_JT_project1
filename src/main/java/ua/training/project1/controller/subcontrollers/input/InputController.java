@@ -17,8 +17,8 @@ public class InputController {
 	public String getString(String regex) {
 		String result;
 		
-		while (!(sc.hasNext() && (result = sc.next()).matches(regex))) {
-			view.printErrorMessage();
+		while (!(sc.hasNext() && (result = sc.nextLine()).matches(regex))) {
+			view.printErrorMessage(View.SYSTEM_WRONGINPUT);
 		}
 		return result;
 	}

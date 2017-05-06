@@ -2,6 +2,7 @@ package ua.training.project1.view;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -24,6 +25,8 @@ public class View {
 	public static final String CARS_TYPE_BUSINESS = configBundle.getString("cars.type.business");
 	public static final String CARS_TYPE_FAMILY = configBundle.getString("cars.type.family");
 	public static final String CARS_TYPE_MINI = configBundle.getString("cars.type.mini");
+	
+	public static final String REGEX_MENU = configBundle.getString("regex.menu");
 
 	public static final String SYSTEM_STARS = configBundle.getString("system.stars");
 	public static final String SYSTEM_TITLE = configBundle.getString("system.title");
@@ -35,29 +38,51 @@ public class View {
 	public static final String SYSTEM_FIND = configBundle.getString("system.find");
 	public static final String SYSTEM_TOTAL = configBundle.getString("system.total");
 	public static final String SYSTEM_EXIT = configBundle.getString("system.exit");
-
+	public static final String SYSTEM_CARLISTINFO = configBundle.getString("system.carslistinfo");
+	
+	public static final String SYSTEM_WRONGINPUT = configBundle.getString("system.error.wronginput");
+	public static final String SYSTEM_NOTHINGFOUND = configBundle.getString("system.error.nothingfound");
+	
+	public void printCars(ArrayList<Vehicle> cars) {
+		if (!cars.isEmpty()) {
+			printMessage(SYSTEM_CARLISTINFO);
+			for (Vehicle car : cars) {
+				String[] carInfo = car.toString().split(Symbols.SPACE_SYMBOL);
+				StringBuilder sb = new StringBuilder();
+				for (int index = 0; index < carInfo.length; index++) {
+					if (index < GlobalConstants.NUMERICAL_START_INDEX) {
+						sb.append(carInfo[index]);
+					} else {
+						Double value = Double.valueOf(carInfo[index]);
+						sb.append(formatter.format(value));
+					}
+					sb.append("\t\t");
+				}
+				printMessage(sb.toString());
+			}
+		}
+		else {
+			printErrorMessage(View.SYSTEM_NOTHINGFOUND);
+		}
+		
+	}
+	
 	public void printAllCars(TaxiStation taxiStation) {
-
-		System.out.println("TYPE\t\t\tMODEL\t\tPRICE\t\tVELOCITY\t\tFUEL");
-
+		printMessage(SYSTEM_CARLISTINFO);
 		for (Vehicle car : taxiStation.getCars()) {
-			String[] carInfo = car.toString().split(" ");
+			String[] carInfo = car.toString().split(Symbols.SPACE_SYMBOL);
 			StringBuilder sb = new StringBuilder();
 			for (int index = 0; index < carInfo.length; index++) {
-				if (index < GlobalConstants.NUMERICAL_START_INDEX) { 
+				if (index < GlobalConstants.NUMERICAL_START_INDEX) {
 					sb.append(carInfo[index]);
-					sb.append("\t\t\t");
 				} else {
 					Double value = Double.valueOf(carInfo[index]);
 					sb.append(formatter.format(value));
-					sb.append("\t\t");
 				}
-
+				sb.append("\t\t");
 			}
 			printMessage(sb.toString());
 		}
-
-		// info.add(formatter.format(super.getPrice()));
 	}
 
 	public void printMenu() {
@@ -75,8 +100,8 @@ public class View {
 		System.out.println(message);
 	}
 
-	public void printErrorMessage() {
-		System.err.println("ERROR"); // TODO REMOVE LATER
+	public void printErrorMessage(String errorMessage) {
+		System.err.println(errorMessage); 
 	}
 
 }

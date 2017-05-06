@@ -1,10 +1,11 @@
 package ua.training.project1.model.entities.interfaces;
 
-public interface Minivan extends PassengerCar {
+public interface Cabriolet extends PassengerCar {
 	@Override
 	default int getCapacity() {
 		return MINIVAN_CAPACITY;
 	}
-	
-	void addLuggage();
+
+	void openRoof();
+	void closeRoof();
 }

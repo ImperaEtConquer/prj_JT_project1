@@ -8,7 +8,7 @@ import ua.training.project1.model.entities.Vehicle;
 public class TaxiStation {
 
 	private ArrayList<Vehicle> cars;
-	
+
 	public TaxiStation() {
 		cars = new ArrayList<>();
 	}
@@ -24,7 +24,7 @@ public class TaxiStation {
 	public void removeCar(Vehicle car) {
 		cars.remove(car);
 	}
-	
+
 	public void removeAllCars() {
 		cars.clear();
 	}

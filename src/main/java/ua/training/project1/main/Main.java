@@ -7,7 +7,6 @@ import ua.training.project1.view.View;
 public class Main {
 
 	public static void main(String[] args) {
-
 		Controller controller = new Controller(new TaxiStation(), new View());
 		controller.processUser();
 	}

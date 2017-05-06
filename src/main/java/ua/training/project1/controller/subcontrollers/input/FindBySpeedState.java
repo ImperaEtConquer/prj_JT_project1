@@ -17,8 +17,17 @@ public class FindBySpeedState implements State {
 
 	@Override
 	public void execute() {
-		taxiStation.getCarListByParams(0,0); //TODO redo
-		view.printMessage("");//TODO bundle
+		double min = getParams(parameters)[0];
+		double max = getParams(parameters)[1];
+		view.printCars(taxiStation.getCarListByParams(min, max));
+	}
+	
+	private double[] getParams(String parameters) {
+		double[] doubleParameters = new double[2];
+		String[] stringParamaters = parameters.split(" ");
+		doubleParameters[0] = Double.parseDouble(stringParamaters[1]);
+		doubleParameters[1] = Double.parseDouble(stringParamaters[2]);
+		return doubleParameters;
 	}
 
 }

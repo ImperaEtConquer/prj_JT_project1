@@ -4,8 +4,8 @@ import java.util.Random;
 
 import ua.training.project1.model.entities.BusinessCar;
 import ua.training.project1.model.entities.Vehicle;
-import ua.training.project1.model.entities.FamilyCar;
-import ua.training.project1.model.entities.MiniCar;
+import ua.training.project1.model.entities.SportCar;
+import ua.training.project1.model.entities.LimousineCar;
 import ua.training.project1.model.entities.Model;
 import ua.training.project1.view.View;
 
@@ -25,9 +25,9 @@ public class CarFactory {
 		if (type.equals(View.CARS_TYPE_BUSINESS)) {
 			return new BusinessCar(model, fuelConsumption, velocity, price);
 		} else if (type.equals(View.CARS_TYPE_FAMILY)) {
-			return new FamilyCar(model, fuelConsumption, velocity, price);
+			return new SportCar(model, fuelConsumption, velocity, price);
 		} else {
-			return new MiniCar(model, fuelConsumption, velocity, price);
+			return new LimousineCar(model, fuelConsumption, velocity, price);
 		}
 
 	}

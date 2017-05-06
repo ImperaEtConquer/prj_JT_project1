@@ -7,4 +7,5 @@ public interface Luxury extends PassengerCar {
 	}
 
 	void turnOnTV();
+	void turnOffTV();
 }
