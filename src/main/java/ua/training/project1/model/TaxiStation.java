@@ -6,7 +6,6 @@ import java.util.Collections;
 import ua.training.project1.model.entities.Vehicle;
 
 public class TaxiStation {
-
 	private ArrayList<Vehicle> cars;
 
 	public TaxiStation() {

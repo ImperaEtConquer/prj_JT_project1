@@ -5,7 +5,6 @@ import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 
 public class AddRandomCarState implements State {
-
 	private TaxiStation taxiStation;
 	private CarFactory carFactory;
 	private View view;
@@ -19,7 +18,7 @@ public class AddRandomCarState implements State {
 	@Override
 	public void execute() {
 		taxiStation.addCar(carFactory.createCar());
-		view.printMessage("Added."); // TODO bundle
+		view.printMessage(View.MESSAGE_ADD);
 	}
 
 }

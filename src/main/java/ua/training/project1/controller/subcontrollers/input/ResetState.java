@@ -4,7 +4,6 @@ import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 
 public class ResetState implements State {
-
 	private TaxiStation taxiStation;
 	private View view;
 
@@ -16,7 +15,7 @@ public class ResetState implements State {
 	@Override
 	public void execute() {
 		taxiStation.removeAllCars();
-		view.printMessages("Reset."); //TODO RESET
+		view.printMessage(View.MESSAGE_RESET);
 	}
 
 }

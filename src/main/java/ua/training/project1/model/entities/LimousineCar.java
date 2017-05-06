@@ -4,7 +4,6 @@ import ua.training.project1.model.entities.interfaces.Party;
 import ua.training.project1.view.Symbols;
 
 public class LimousineCar extends Vehicle implements Party {
-	
 	private boolean areDrinksFull;
 
 	public LimousineCar(Model model, double fuelConsumption, double velocity, double price) {

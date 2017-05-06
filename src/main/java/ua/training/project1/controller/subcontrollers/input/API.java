@@ -36,6 +36,8 @@ public class API {
 			this.state = new GetTotalPriceState(taxiStation, view);
 		} else if (userInput.equals(GlobalConstants.MENU_EXIT)) {
 			this.state = new ExitState();
+		} else if (userInput.equals(GlobalConstants.MENU_LANG)) {
+			this.state = new LanguageState(view);
 		} else {
 			view.printErrorMessage(View.SYSTEM_WRONGINPUT);
 		}

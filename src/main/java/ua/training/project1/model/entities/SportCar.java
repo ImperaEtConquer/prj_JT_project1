@@ -4,12 +4,10 @@ import ua.training.project1.model.entities.interfaces.Cabriolet;
 import ua.training.project1.view.Symbols;
 
 public class SportCar extends Vehicle implements Cabriolet {
-
 	private boolean isRoofOpen;
 
 	public SportCar(Model model, double fuelConsumption, double velocity, double price) {
 		super(model, fuelConsumption, velocity, price);
-
 	}
 
 	@Override

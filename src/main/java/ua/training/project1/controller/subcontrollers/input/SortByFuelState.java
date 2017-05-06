@@ -4,7 +4,6 @@ import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 
 public class SortByFuelState implements State {
-
 	private TaxiStation taxiStation;
 	private View view;
 
@@ -16,7 +15,7 @@ public class SortByFuelState implements State {
 	@Override
 	public void execute() {
 		taxiStation.sortByFuelConsumption();
-		view.printMessage("Sorted."); // TODO bundle
+		view.printMessage(View.MESSAGE_SORT);
 	}
 
 }

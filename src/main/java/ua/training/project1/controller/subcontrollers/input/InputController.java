@@ -5,7 +5,6 @@ import java.util.Scanner;
 import ua.training.project1.view.View;
 
 public class InputController {
-
 	private Scanner sc;
 	private View view;
 
@@ -16,13 +15,13 @@ public class InputController {
 
 	public String getString(String regex) {
 		String result;
-		
+
 		while (!(sc.hasNext() && (result = sc.nextLine()).matches(regex))) {
 			view.printErrorMessage(View.SYSTEM_WRONGINPUT);
 		}
 		return result;
 	}
-	
+
 	public View getView() {
 		return view;
 	}

@@ -8,7 +8,6 @@ import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 
 public class Controller {
-
 	private TaxiStation model;
 	private View view;
 

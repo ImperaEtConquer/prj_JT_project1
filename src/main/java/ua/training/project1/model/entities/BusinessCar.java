@@ -4,7 +4,6 @@ import ua.training.project1.model.entities.interfaces.Luxury;
 import ua.training.project1.view.Symbols;
 
 public class BusinessCar extends Vehicle implements Luxury {
-
 	private boolean isTVOn;
 
 	public BusinessCar(Model model, double fuelConsumption, double velocity, double price) {

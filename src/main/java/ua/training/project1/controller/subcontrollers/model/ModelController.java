@@ -6,7 +6,6 @@ import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 
 public class ModelController {
-
 	private View view;
 	private TaxiStation taxiStation;
 	private InputController inputController;

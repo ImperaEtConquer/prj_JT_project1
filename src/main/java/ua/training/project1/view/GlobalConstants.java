@@ -12,5 +12,6 @@ public interface GlobalConstants {
 	public static String MENU_RESET = "4";
 	public static String MENU_FIND = "5";
 	public static String MENU_PRICE = "6";
+	public static String MENU_LANG = "7";
 
 }
