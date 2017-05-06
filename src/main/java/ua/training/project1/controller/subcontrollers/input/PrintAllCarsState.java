@@ -5,8 +5,8 @@ import ua.training.project1.view.View;
 
 public class PrintAllCarsState implements State {
 
-	TaxiStation taxiStation;
-	View view;
+	private TaxiStation taxiStation;
+	private View view;
 
 	public PrintAllCarsState(TaxiStation taxiStation, View view) {
 		this.taxiStation = taxiStation;

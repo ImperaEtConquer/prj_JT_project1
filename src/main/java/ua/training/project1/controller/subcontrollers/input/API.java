@@ -19,24 +19,33 @@ public class API {
 	}
 
 	public void setState() {
-		if (inputController.getString("1").equals("1")) {
+		String value = inputController.getString("[0-9]");
+		if (value.equals("1")) {
 			this.state = new AddRandomCarState(taxiStation, carFactory, view);
-			System.out.println("add");	//TODO remove
 		}
-		if (inputController.getString("2").equals("2")) {
+		else if (value.equals("2")) {
 			this.state = new SortByFuelState(taxiStation, view);
 		}
-		if (inputController.getString("0").equals("0")) {
-			this.state = new ExitState();
-			System.out.println("exit");	//TODO remove
+		else if (value.equals("3")) {
+			this.state = new PrintAllCarsState(taxiStation, view);
 		}
-		else {
-			view.printErrorMessage(); //TODO bundle
+		else if (value.equals("4")) {
+			this.state = new ResetState(taxiStation, view);
+		}
+		else if (value.equals("5")) {
+			this.state = new SortByFuelState(taxiStation, view);
+		}
+		else if (value.equals("6")) {
+			this.state = new SortByFuelState(taxiStation, view);
+		}
+		else if (value.equals("0")) {
+			this.state = new ExitState();
+		} else {
+			view.printErrorMessage(); // TODO bundle
 		}
 	}
 
 	public void execute() {
 		this.state.execute();
-		System.out.println("done");	//TODO remove
 	}
 }

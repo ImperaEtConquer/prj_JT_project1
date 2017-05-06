@@ -6,9 +6,9 @@ import ua.training.project1.view.View;
 
 public class AddRandomCarState implements State {
 
-	TaxiStation taxiStation;
-	CarFactory carFactory;
-	View view;
+	private TaxiStation taxiStation;
+	private CarFactory carFactory;
+	private View view;
 
 	public AddRandomCarState(TaxiStation taxiStation, CarFactory carFactory, View view) {
 		this.taxiStation = taxiStation;

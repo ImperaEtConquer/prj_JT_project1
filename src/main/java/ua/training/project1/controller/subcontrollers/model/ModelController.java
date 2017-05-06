@@ -23,9 +23,8 @@ public class ModelController {
 	public void process() {
 
 		API api = new API(inputController, taxiStation, carFactory, view);
-
+		view.printMenu();
 		while (true) {
-			view.printMenu();
 			api.setState();
 			api.execute();
 		}

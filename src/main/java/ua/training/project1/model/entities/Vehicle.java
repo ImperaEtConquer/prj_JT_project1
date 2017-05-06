@@ -1,5 +1,7 @@
 package ua.training.project1.model.entities;
 
+import ua.training.project1.view.Symbols;
+
 public abstract class Vehicle {
 	private Model model;
 	private double fuelConsumption;
@@ -27,6 +29,12 @@ public abstract class Vehicle {
 
 	public Model getModel() {
 		return model;
+	}
+
+	@Override
+	public String toString() {
+		return new StringBuilder().append(model).append(Symbols.SPACE_SYMBOL).append(price).append(Symbols.SPACE_SYMBOL)
+				.append(velocity).append(Symbols.SPACE_SYMBOL).append(fuelConsumption).toString();
 	}
 
 }

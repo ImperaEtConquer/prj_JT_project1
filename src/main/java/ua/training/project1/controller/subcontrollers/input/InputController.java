@@ -6,8 +6,8 @@ import ua.training.project1.view.View;
 
 public class InputController {
 
-	Scanner sc;
-	View view;
+	private Scanner sc;
+	private View view;
 
 	public InputController(Scanner sc, View view) {
 		this.sc = sc;

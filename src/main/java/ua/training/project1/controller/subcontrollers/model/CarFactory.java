@@ -22,9 +22,9 @@ public class CarFactory {
 		double velocity = getRandomDoubleValue(View.DATA_MIN_VELOCITY, View.DATA_MAX_VELOCITY);
 		double price = getRandomDoubleValue(View.DATA_MIN_PRICE, View.DATA_MAX_PRICE);
 
-		if (type.equals(View.REGEX_TYPE_BUSINESS)) {
+		if (type.equals(View.CARS_TYPE_BUSINESS)) {
 			return new BusinessCar(model, fuelConsumption, velocity, price);
-		} else if (type.equals(View.REGEX_TYPE_FAMILY)) {
+		} else if (type.equals(View.CARS_TYPE_FAMILY)) {
 			return new FamilyCar(model, fuelConsumption, velocity, price);
 		} else {
 			return new MiniCar(model, fuelConsumption, velocity, price);
@@ -36,11 +36,11 @@ public class CarFactory {
 		int randomValue = new Random().nextInt(3);
 
 		if (randomValue == 0) {
-			return View.REGEX_TYPE_BUSINESS;
+			return View.CARS_TYPE_BUSINESS;
 		} else if (randomValue == 1) {
-			return View.REGEX_TYPE_FAMILY;
+			return View.CARS_TYPE_FAMILY;
 		} else {
-			return View.REGEX_TYPE_MINI;
+			return View.CARS_TYPE_MINI;
 		}
 
 	}
