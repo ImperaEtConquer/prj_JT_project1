@@ -1,4 +1,4 @@
-# Taxi Station MVC
+# Java Taxi Station MVC
 
 ## Task
 
@@ -16,8 +16,8 @@
 Провести сортировку автомобилей парка по расходу топлива. 
 Найти автомобиль в компании, соответствующий заданному диапазону параметров скорости.
 
-### Used patterns
+## Used patterns
 * Factory
 * State
 
-### UML
+## UML

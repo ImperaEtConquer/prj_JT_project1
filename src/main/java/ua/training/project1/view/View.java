@@ -130,9 +130,12 @@ public class View {
 			currlocale = enLocale;
 			CONFIG_BUNDLE_NAME = CONFIG_BUNDLE_NAME_EN;
 		}
-
 		configBundle = ResourceBundle.getBundle(CONFIG_BUNDLE_NAME, currlocale);
-
+		reloadStrings();
+		printMenu();
+	}
+	
+	private void reloadStrings() {
 		DATA_MIN_PRICE = configBundle.getString("data.cars.price.minimum");
 		DATA_MAX_PRICE = configBundle.getString("data.cars.price.maximum");
 		DATA_MIN_FUEL = configBundle.getString("data.cars.fuel.minimum");
@@ -167,7 +170,6 @@ public class View {
 		SYSTEM_WRONGINPUT = configBundle.getString("system.error.wronginput");
 		SYSTEM_NOTHINGFOUND = configBundle.getString("system.error.nothingfound");
 
-		printMenu();
 	}
 
 }

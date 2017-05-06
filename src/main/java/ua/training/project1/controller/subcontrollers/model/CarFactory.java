@@ -15,20 +15,6 @@ public class CarFactory {
 	public Vehicle createCar() {
 		return createCar(getRandomType());
 	}
-	
-	/*
-	 * Manual creation
-	 */
-	
-//	public Vehicle createCar(String type, Model model, double fuelConsumption, double velocity, double price) {
-//		if (type.equals(CARS_TYPE_BUSINESS)) {
-//			return new BusinessCar(model, fuelConsumption, velocity, price);
-//		} else if (type.equals(CARS_TYPE_SPORT)) {
-//			return new SportCar(model, fuelConsumption, velocity, price);
-//		} else {
-//			return new LimousineCar(model, fuelConsumption, velocity, price);
-//		}
-//	}
 
 	private Vehicle createCar(String type) {
 
