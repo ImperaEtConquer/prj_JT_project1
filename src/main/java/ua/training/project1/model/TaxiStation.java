@@ -3,7 +3,6 @@ package ua.training.project1.model;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import ua.training.project1.controller.subcontrollers.model.ComparatorController;
 import ua.training.project1.model.entities.Vehicle;
 
 public class TaxiStation {
@@ -25,6 +24,10 @@ public class TaxiStation {
 	public void removeCar(Vehicle car) {
 		cars.remove(car);
 	}
+	
+	public void removeAllCars() {
+		cars.clear();
+	}
 
 	public double getTotalPrice() {
 		double totalprice = 0;
@@ -37,7 +40,7 @@ public class TaxiStation {
 	}
 
 	public void sortByFuelConsumption() {
-		Collections.sort(cars, new ComparatorController());
+		Collections.sort(cars, new VehicleComparator());
 	}
 
 	public ArrayList<Vehicle> getCarListByParams(double minVelocity, double maxVelocity) {

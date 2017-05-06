@@ -35,7 +35,7 @@ public class View {
 	public static final String SYSTEM_EXIT = configBundle.getString("system.exit");
 	
 	public void printAllCars(TaxiStation taxiStation) {
-		for (Vehicle car : taxiStation.getCars()) {
+		for (Vehicle car : taxiStation.getCars()) { //TODO Implement tabulation later
 			printMessage(car.toString());
 		}
 	}
