@@ -7,24 +7,39 @@ import ua.training.project1.model.entities.Vehicle;
 import ua.training.project1.model.entities.SportCar;
 import ua.training.project1.model.entities.LimousineCar;
 import ua.training.project1.model.entities.Model;
-import ua.training.project1.view.View;
+import static ua.training.project1.view.View.*;
+import static ua.training.project1.view.GlobalConstants.*;
 
 public class CarFactory {
 
 	public Vehicle createCar() {
 		return createCar(getRandomType());
 	}
+	
+	/*
+	 * Manual creation
+	 */
+	
+//	public Vehicle createCar(String type, Model model, double fuelConsumption, double velocity, double price) {
+//		if (type.equals(CARS_TYPE_BUSINESS)) {
+//			return new BusinessCar(model, fuelConsumption, velocity, price);
+//		} else if (type.equals(CARS_TYPE_SPORT)) {
+//			return new SportCar(model, fuelConsumption, velocity, price);
+//		} else {
+//			return new LimousineCar(model, fuelConsumption, velocity, price);
+//		}
+//	}
 
 	private Vehicle createCar(String type) {
 
 		Model model = getRandomModelValue();
-		double fuelConsumption = getRandomDoubleValue(View.DATA_MIN_FUEL, View.DATA_MAX_FUEL);
-		double velocity = getRandomDoubleValue(View.DATA_MIN_VELOCITY, View.DATA_MAX_VELOCITY);
-		double price = getRandomDoubleValue(View.DATA_MIN_PRICE, View.DATA_MAX_PRICE);
+		double fuelConsumption = getRandomDoubleValue(DATA_MIN_FUEL, DATA_MAX_FUEL);
+		double velocity = getRandomDoubleValue(DATA_MIN_VELOCITY, DATA_MAX_VELOCITY);
+		double price = getRandomDoubleValue(DATA_MIN_PRICE, DATA_MAX_PRICE);
 
-		if (type.equals(View.CARS_TYPE_BUSINESS)) {
+		if (type.equals(CARS_TYPE_BUSINESS)) {
 			return new BusinessCar(model, fuelConsumption, velocity, price);
-		} else if (type.equals(View.CARS_TYPE_FAMILY)) {
+		} else if (type.equals(CARS_TYPE_SPORT)) {
 			return new SportCar(model, fuelConsumption, velocity, price);
 		} else {
 			return new LimousineCar(model, fuelConsumption, velocity, price);
@@ -33,14 +48,14 @@ public class CarFactory {
 	}
 
 	private String getRandomType() {
-		int randomValue = new Random().nextInt(3);
+		int randomValue = new Random().nextInt(RANDOM_BORDER);
 
-		if (randomValue == 0) {
-			return View.CARS_TYPE_BUSINESS;
-		} else if (randomValue == 1) {
-			return View.CARS_TYPE_FAMILY;
+		if (randomValue == BUSINESS_RANDOM) {	
+			return CARS_TYPE_BUSINESS;
+		} else if (randomValue == SPORT_RANDOM) {
+			return CARS_TYPE_SPORT;
 		} else {
-			return View.CARS_TYPE_MINI;
+			return CARS_TYPE_LIMOUSINE;
 		}
 
 	}

@@ -1,6 +1,6 @@
 package ua.training.project1.model.entities;
 
-import ua.training.project1.view.Symbols;
+import static ua.training.project1.view.Symbols.SPACE_SYMBOL;
 
 public abstract class Vehicle {
 	private Model model;
@@ -33,8 +33,8 @@ public abstract class Vehicle {
 
 	@Override
 	public String toString() {
-		return new StringBuilder().append(model).append(Symbols.SPACE_SYMBOL).append(price).append(Symbols.SPACE_SYMBOL)
-				.append(velocity).append(Symbols.SPACE_SYMBOL).append(fuelConsumption).toString();
+		return new StringBuilder().append(model).append(SPACE_SYMBOL).append(price).append(SPACE_SYMBOL)
+				.append(velocity).append(SPACE_SYMBOL).append(fuelConsumption).toString();
 	}
 
 }

@@ -3,6 +3,8 @@ package ua.training.project1.controller.subcontrollers.input;
 import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 
+import static ua.training.project1.view.View.MESSAGE_SORT;
+
 public class SortByFuelState implements State {
 	private TaxiStation taxiStation;
 	private View view;
@@ -15,7 +17,7 @@ public class SortByFuelState implements State {
 	@Override
 	public void execute() {
 		taxiStation.sortByFuelConsumption();
-		view.printMessage(View.MESSAGE_SORT);
+		view.printMessage(MESSAGE_SORT);
 	}
 
 }

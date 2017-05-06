@@ -1,7 +1,8 @@
 package ua.training.project1.model.entities;
 
 import ua.training.project1.model.entities.interfaces.Party;
-import ua.training.project1.view.Symbols;
+import static ua.training.project1.view.Symbols.SPACE_SYMBOL;
+
 
 public class LimousineCar extends Vehicle implements Party {
 	private boolean areDrinksFull;
@@ -15,13 +16,13 @@ public class LimousineCar extends Vehicle implements Party {
 		areDrinksFull = true;
 	}
 	
-	public boolean arreDrinksFull() {
+	public boolean areDrinksFull() {
 		return areDrinksFull;
 	}
 
 	@Override
 	public String toString() {
-		return new StringBuilder(this.getClass().getSimpleName()).append(Symbols.SPACE_SYMBOL).append(super.toString())
+		return new StringBuilder(this.getClass().getSimpleName()).append(SPACE_SYMBOL).append(super.toString())
 				.toString();
 	}
 

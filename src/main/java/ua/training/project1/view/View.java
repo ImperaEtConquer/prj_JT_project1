@@ -31,8 +31,8 @@ public class View {
 	public static String DATA_MAX_VELOCITY = configBundle.getString("data.cars.velocity.maximum");
 
 	public static String CARS_TYPE_BUSINESS = configBundle.getString("cars.type.business");
-	public static String CARS_TYPE_FAMILY = configBundle.getString("cars.type.family");
-	public static String CARS_TYPE_MINI = configBundle.getString("cars.type.mini");
+	public static String CARS_TYPE_SPORT = configBundle.getString("cars.type.sport");
+	public static String CARS_TYPE_LIMOUSINE = configBundle.getString("cars.type.limo");
 
 	public static String REGEX_MENU = configBundle.getString("regex.menu");
 
@@ -141,8 +141,8 @@ public class View {
 		DATA_MAX_VELOCITY = configBundle.getString("data.cars.velocity.maximum");
 
 		CARS_TYPE_BUSINESS = configBundle.getString("cars.type.business");
-		CARS_TYPE_FAMILY = configBundle.getString("cars.type.family");
-		CARS_TYPE_MINI = configBundle.getString("cars.type.mini");
+		CARS_TYPE_SPORT = configBundle.getString("cars.type.family");
+		CARS_TYPE_LIMOUSINE = configBundle.getString("cars.type.mini");
 
 		REGEX_MENU = configBundle.getString("regex.menu");
 

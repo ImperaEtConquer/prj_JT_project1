@@ -1,7 +1,7 @@
 package ua.training.project1.model.entities;
 
 import ua.training.project1.model.entities.interfaces.Luxury;
-import ua.training.project1.view.Symbols;
+import static ua.training.project1.view.Symbols.SPACE_SYMBOL;
 
 public class BusinessCar extends Vehicle implements Luxury {
 	private boolean isTVOn;
@@ -26,7 +26,7 @@ public class BusinessCar extends Vehicle implements Luxury {
 
 	@Override
 	public String toString() {
-		return new StringBuilder(this.getClass().getSimpleName()).append(Symbols.SPACE_SYMBOL).append(super.toString())
+		return new StringBuilder(this.getClass().getSimpleName()).append(SPACE_SYMBOL).append(super.toString())
 				.toString();
 	}
 

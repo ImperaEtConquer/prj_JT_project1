@@ -1,6 +1,6 @@
 package ua.training.project1.controller.subcontrollers.model;
 
-import ua.training.project1.controller.subcontrollers.input.API;
+import ua.training.project1.controller.subcontrollers.input.UserAPI;
 import ua.training.project1.controller.subcontrollers.input.InputController;
 import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
@@ -19,7 +19,7 @@ public class ModelController {
 	}
 
 	public void process() {
-		API api = new API(inputController, taxiStation, carFactory, view);
+		UserAPI api = new UserAPI(inputController, taxiStation, carFactory, view);
 		view.printMenu();
 		while (true) {
 			api.setState();

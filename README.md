@@ -17,8 +17,7 @@
 Найти автомобиль в компании, соответствующий заданному диапазону параметров скорости.
 
 ### Used patterns
-* Abstract Factory
+* Factory
 * State
-* Pattern 3
 
 ### UML

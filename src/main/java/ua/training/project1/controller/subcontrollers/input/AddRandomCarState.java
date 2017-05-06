@@ -3,6 +3,7 @@ package ua.training.project1.controller.subcontrollers.input;
 import ua.training.project1.controller.subcontrollers.model.CarFactory;
 import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
+import static ua.training.project1.view.View.MESSAGE_ADD;
 
 public class AddRandomCarState implements State {
 	private TaxiStation taxiStation;
@@ -18,7 +19,7 @@ public class AddRandomCarState implements State {
 	@Override
 	public void execute() {
 		taxiStation.addCar(carFactory.createCar());
-		view.printMessage(View.MESSAGE_ADD);
+		view.printMessage(MESSAGE_ADD);
 	}
 
 }
