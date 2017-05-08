@@ -4,4 +4,6 @@ public interface Cabriolet {
 
 	void openRoof();
 	void closeRoof();
+	boolean isRoofOpen();
+
 }

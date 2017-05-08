@@ -14,6 +14,10 @@ public class View {
 	private static Locale ruLocale = new Locale("ru");
 	private static Locale enLocale = new Locale("en");
 	private static Locale currlocale = enLocale;
+	
+	/*
+	 * TODO FIX BUNDLES
+	 */
 
 	private static final String CONFIG_BUNDLE_NAME_EN = "resources/enconfigUTF";
 	private static final String CONFIG_BUNDLE_NAME_RU = "resources/ruconfigUTF";

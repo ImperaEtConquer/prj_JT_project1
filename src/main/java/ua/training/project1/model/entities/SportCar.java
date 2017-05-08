@@ -3,7 +3,6 @@ package ua.training.project1.model.entities;
 import ua.training.project1.model.entities.interfaces.Cabriolet;
 import static ua.training.project1.view.Symbols.SPACE_SYMBOL;
 
-
 public class SportCar extends Vehicle implements Cabriolet {
 	private boolean isRoofOpen;
 
@@ -21,6 +20,7 @@ public class SportCar extends Vehicle implements Cabriolet {
 		isRoofOpen = false;
 	}
 	
+	@Override
 	public boolean isRoofOpen() {
 		return isRoofOpen;
 	}

@@ -1,10 +1,11 @@
 package ua.training.project1.model.entities;
 
-import ua.training.project1.model.entities.interfaces.Luxury;
+import ua.training.project1.model.entities.interfaces.TV;
 import static ua.training.project1.view.Symbols.SPACE_SYMBOL;
 
-public class BusinessCar extends Vehicle implements Luxury {
+public class BusinessCar extends Vehicle implements TV {
 	private boolean isTVOn;
+	private int currentChannel;
 
 	public BusinessCar(Model model, double fuelConsumption, double velocity, double price) {
 		super(model, fuelConsumption, velocity, price);
@@ -20,8 +21,21 @@ public class BusinessCar extends Vehicle implements Luxury {
 		isTVOn = false;
 	}
 
+	@Override
 	public boolean isTVOn() {
 		return isTVOn;
+	}
+
+	@Override
+	public void switchChannel() {
+		if (isTVOn) {
+			currentChannel = (currentChannel < TV_CHANNEL_AMOUNT) ? ++currentChannel : 0;
+		}
+	}
+
+	@Override
+	public int getCurrentChannel() {
+		return currentChannel;
 	}
 
 	@Override
