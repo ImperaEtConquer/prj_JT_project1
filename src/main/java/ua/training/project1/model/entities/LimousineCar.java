@@ -4,7 +4,7 @@ import ua.training.project1.model.entities.interfaces.Minibar;
 import static ua.training.project1.view.Symbols.SPACE_SYMBOL;
 
 public class LimousineCar extends Vehicle implements Minibar {
-	private double minibarDrinksCapacity = MINIBAR_DRINKS_CAPACITY;
+	private double minibarCapacity = MINIBAR_CAPACITY;
 
 	public LimousineCar(Model model, double fuelConsumption, double velocity, double price) {
 		super(model, fuelConsumption, velocity, price);
@@ -13,18 +13,18 @@ public class LimousineCar extends Vehicle implements Minibar {
 	@Override
 	public void getDrinks() {
 		if (!areDrinksEmpty()) {
-			minibarDrinksCapacity--;
+			minibarCapacity--;
 		}
 	}
 
 	@Override
 	public void refillDrinks() {
-		minibarDrinksCapacity = MINIBAR_DRINKS_CAPACITY;
+		minibarCapacity = MINIBAR_CAPACITY;
 	}
 
 	@Override
 	public boolean areDrinksEmpty() {
-		return minibarDrinksCapacity == 0;
+		return minibarCapacity == 0;
 	}
 
 	@Override

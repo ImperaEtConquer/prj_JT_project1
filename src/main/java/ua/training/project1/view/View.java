@@ -9,23 +9,18 @@ import java.util.ResourceBundle;
 import ua.training.project1.model.TaxiStation;
 import ua.training.project1.model.entities.Vehicle;
 
+import static ua.training.project1.view.Symbols.DOUBLE_TABULATION;
+import static ua.training.project1.view.GlobalConstants.EN;
+import static ua.training.project1.view.GlobalConstants.RU;
+import static ua.training.project1.view.GlobalConstants.DECIMAL_FORMAT;
+
 public class View {
 
-	private static Locale ruLocale = new Locale("ru");
-	private static Locale enLocale = new Locale("en");
-	private static Locale currlocale = enLocale;
-	
-	/*
-	 * TODO FIX BUNDLES
-	 */
+	private static Locale locale = new Locale(EN);
+	private static final String CONFIG_BUNDLE_NAME = "resources/configUTF";
+	private static ResourceBundle configBundle = ResourceBundle.getBundle(CONFIG_BUNDLE_NAME, locale);
 
-	private static final String CONFIG_BUNDLE_NAME_EN = "resources/enconfigUTF";
-	private static final String CONFIG_BUNDLE_NAME_RU = "resources/ruconfigUTF";
-	private static String CONFIG_BUNDLE_NAME = CONFIG_BUNDLE_NAME_EN;
-
-	private static ResourceBundle configBundle = ResourceBundle.getBundle(CONFIG_BUNDLE_NAME, currlocale);
-
-	private NumberFormat formatter = new DecimalFormat("#0.00");
+	private NumberFormat formatter = new DecimalFormat(DECIMAL_FORMAT);
 
 	public static String DATA_MIN_PRICE = configBundle.getString("data.cars.price.minimum");
 	public static String DATA_MAX_PRICE = configBundle.getString("data.cars.price.maximum");
@@ -74,7 +69,7 @@ public class View {
 						Double value = Double.valueOf(carInfo[index]);
 						sb.append(formatter.format(value));
 					}
-					sb.append("\t\t");
+					sb.append(DOUBLE_TABULATION);
 				}
 				printMessage(sb.toString());
 			}
@@ -96,7 +91,7 @@ public class View {
 					Double value = Double.valueOf(carInfo[index]);
 					sb.append(formatter.format(value));
 				}
-				sb.append("\t\t");
+				sb.append(DOUBLE_TABULATION);
 			}
 			printMessage(sb.toString());
 		}
@@ -127,18 +122,16 @@ public class View {
 	}
 
 	public void changeLanguage() {
-		if (CONFIG_BUNDLE_NAME.equals(CONFIG_BUNDLE_NAME_EN)) {
-			currlocale = ruLocale;
-			CONFIG_BUNDLE_NAME = CONFIG_BUNDLE_NAME_RU;
+		if (locale.equals(Locale.ENGLISH)) {
+			locale = new Locale(RU);
 		} else {
-			currlocale = enLocale;
-			CONFIG_BUNDLE_NAME = CONFIG_BUNDLE_NAME_EN;
+			locale = new Locale(EN);
 		}
-		configBundle = ResourceBundle.getBundle(CONFIG_BUNDLE_NAME, currlocale);
+		configBundle = ResourceBundle.getBundle(CONFIG_BUNDLE_NAME, locale);
 		reloadStrings();
 		printMenu();
 	}
-	
+
 	private void reloadStrings() {
 		DATA_MIN_PRICE = configBundle.getString("data.cars.price.minimum");
 		DATA_MAX_PRICE = configBundle.getString("data.cars.price.maximum");
@@ -148,8 +141,8 @@ public class View {
 		DATA_MAX_VELOCITY = configBundle.getString("data.cars.velocity.maximum");
 
 		CARS_TYPE_BUSINESS = configBundle.getString("cars.type.business");
-		CARS_TYPE_SPORT = configBundle.getString("cars.type.family");
-		CARS_TYPE_LIMOUSINE = configBundle.getString("cars.type.mini");
+		CARS_TYPE_SPORT = configBundle.getString("cars.type.sport");
+		CARS_TYPE_LIMOUSINE = configBundle.getString("cars.type.limo");
 
 		REGEX_MENU = configBundle.getString("regex.menu");
 

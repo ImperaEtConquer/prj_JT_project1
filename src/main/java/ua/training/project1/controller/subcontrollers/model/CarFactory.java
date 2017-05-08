@@ -36,7 +36,7 @@ public class CarFactory {
 	private String getRandomType() {
 		int randomValue = new Random().nextInt(RANDOM_BORDER);
 
-		if (randomValue == BUSINESS_RANDOM) {	
+		if (randomValue == BUSINESS_RANDOM) {
 			return CARS_TYPE_BUSINESS;
 		} else if (randomValue == SPORT_RANDOM) {
 			return CARS_TYPE_SPORT;

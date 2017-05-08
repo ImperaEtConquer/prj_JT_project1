@@ -29,7 +29,7 @@ public class BusinessCar extends Vehicle implements TV {
 	@Override
 	public void switchChannel() {
 		if (isTVOn) {
-			currentChannel = (currentChannel < TV_CHANNEL_AMOUNT) ? ++currentChannel : 0;
+			currentChannel = (currentChannel < TV_LAST_CHANNEL_INDEX) ? ++currentChannel : 0;
 		}
 	}
 

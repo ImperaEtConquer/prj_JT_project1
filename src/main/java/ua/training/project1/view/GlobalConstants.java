@@ -26,5 +26,10 @@ public interface GlobalConstants {
 	public static String MENU_FIND = "5";
 	public static String MENU_PRICE = "6";
 	public static String MENU_LANG = "7";
+	
+	public static String RU = "ru";
+	public static String EN = "en";
+	
+	public static String DECIMAL_FORMAT = "#0.00";
 
 }
