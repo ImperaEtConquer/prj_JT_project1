@@ -19,5 +19,3 @@
 ## Used patterns
 * Factory
 * State
-
-## UML
