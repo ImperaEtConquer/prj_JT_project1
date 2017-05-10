@@ -1,7 +1,7 @@
 package ua.training.project1.view;
 
 public interface Symbols {
-	public static final String SPACE_SYMBOL = " ";
-	public static final String DOT_SYMBOL = ".";
-	public static final String DOUBLE_TABULATION = "\t\t";
+	static String SPACE_SYMBOL = " ";
+	static String DOT_SYMBOL = ".";
+	static String DOUBLE_TABULATION = "\t\t";
 }

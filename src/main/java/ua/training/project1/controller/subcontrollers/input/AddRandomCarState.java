@@ -5,7 +5,7 @@ import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 import static ua.training.project1.view.View.MESSAGE_ADD;
 
-public class AddRandomCarState implements State {
+class AddRandomCarState implements State {
 	private TaxiStation taxiStation;
 	private CarFactory carFactory;
 	private View view;

@@ -4,7 +4,7 @@ import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 import static ua.training.project1.view.View.MESSAGE_RESET;
 
-public class ResetState implements State {
+class ResetState implements State {
 	private TaxiStation taxiStation;
 	private View view;
 

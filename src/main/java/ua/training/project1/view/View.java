@@ -35,18 +35,18 @@ public class View {
 
 	public static String REGEX_MENU = configBundle.getString("regex.menu");
 
-	public static String SYSTEM_STARS = configBundle.getString("system.stars");
-	public static String SYSTEM_TITLE = configBundle.getString("system.title");
-	public static String SYSTEM_CONTROLS = configBundle.getString("system.controls");
-	public static String SYSTEM_ADDCAR = configBundle.getString("system.addcar");
-	public static String SYSTEM_SORT = configBundle.getString("system.sort");
-	public static String SYSTEM_PRINT = configBundle.getString("system.print");
-	public static String SYSTEM_RESET = configBundle.getString("system.reset");
-	public static String SYSTEM_FIND = configBundle.getString("system.find");
-	public static String SYSTEM_TOTAL = configBundle.getString("system.total");
-	public static String SYSTEM_LANG = configBundle.getString("system.lang");
-	public static String SYSTEM_EXIT = configBundle.getString("system.exit");
-	public static String SYSTEM_CARLISTINFO = configBundle.getString("system.carslistinfo");
+	private static String SYSTEM_STARS = configBundle.getString("system.stars");
+	private static String SYSTEM_TITLE = configBundle.getString("system.title");
+	private static String SYSTEM_CONTROLS = configBundle.getString("system.controls");
+	private static String SYSTEM_ADDCAR = configBundle.getString("system.addcar");
+	private static String SYSTEM_SORT = configBundle.getString("system.sort");
+	private static String SYSTEM_PRINT = configBundle.getString("system.print");
+	private static String SYSTEM_RESET = configBundle.getString("system.reset");
+	private static String SYSTEM_FIND = configBundle.getString("system.find");
+	private static String SYSTEM_TOTAL = configBundle.getString("system.total");
+	private static String SYSTEM_LANG = configBundle.getString("system.lang");
+	private static String SYSTEM_EXIT = configBundle.getString("system.exit");
+	private static String SYSTEM_CARLISTINFO = configBundle.getString("system.carslistinfo");
 
 	public static String MESSAGE_USD = configBundle.getString("system.message.usd");
 	public static String MESSAGE_ADD = configBundle.getString("system.message.add");

@@ -19,7 +19,7 @@ public class SportCar extends Vehicle implements Cabriolet {
 	public void closeRoof() {
 		isRoofOpen = false;
 	}
-	
+
 	@Override
 	public boolean isRoofOpen() {
 		return isRoofOpen;

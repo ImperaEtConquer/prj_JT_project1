@@ -5,7 +5,7 @@ import ua.training.project1.view.View;
 import static ua.training.project1.view.GlobalConstants.*;
 import static ua.training.project1.view.Symbols.*;
 
-public class FindBySpeedState implements State {
+class FindBySpeedState implements State {
 	private TaxiStation taxiStation;
 	private View view;
 	private String parameters;
@@ -18,16 +18,16 @@ public class FindBySpeedState implements State {
 
 	@Override
 	public void execute() {
-		double min = getParams(parameters)[FIRST_PARAMETER];
-		double max = getParams(parameters)[SECOND_PARAMETER];
+		double min = getParams(parameters)[FIRST_SPEED_PARAMETER];
+		double max = getParams(parameters)[SECOND_SPEED_PARAMETER];
 		view.printCars(taxiStation.getCarListByParams(min, max));
 	}
-	
+
 	private double[] getParams(String parameters) {
-		double[] doubleParameters = new double[PARAMETERS_AMOUNT];
+		double[] doubleParameters = new double[SPEED_PARAMETERS_AMOUNT];
 		String[] stringParamaters = parameters.split(SPACE_SYMBOL);
-		doubleParameters[FIRST_PARAMETER] = Double.parseDouble(stringParamaters[FIRST_STRING_PARAMETER]);
-		doubleParameters[SECOND_PARAMETER] = Double.parseDouble(stringParamaters[SECOND_STRING_PARAMETER]);
+		doubleParameters[FIRST_SPEED_PARAMETER] = Double.parseDouble(stringParamaters[FIRST_STRING_PARAMETER]);
+		doubleParameters[SECOND_SPEED_PARAMETER] = Double.parseDouble(stringParamaters[SECOND_STRING_PARAMETER]);
 		return doubleParameters;
 	}
 

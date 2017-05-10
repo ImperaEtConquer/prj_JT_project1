@@ -5,7 +5,7 @@ import ua.training.project1.view.View;
 
 import static ua.training.project1.view.View.MESSAGE_SORT;
 
-public class SortByFuelState implements State {
+class SortByFuelState implements State {
 	private TaxiStation taxiStation;
 	private View view;
 

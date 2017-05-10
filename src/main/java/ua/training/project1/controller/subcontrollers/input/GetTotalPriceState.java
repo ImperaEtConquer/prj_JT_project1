@@ -3,7 +3,7 @@ package ua.training.project1.controller.subcontrollers.input;
 import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 
-public class GetTotalPriceState implements State {
+class GetTotalPriceState implements State {
 	private TaxiStation taxiStation;
 	private View view;
 

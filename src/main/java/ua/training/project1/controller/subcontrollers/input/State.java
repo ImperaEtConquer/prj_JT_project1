@@ -1,5 +1,5 @@
 package ua.training.project1.controller.subcontrollers.input;
 
-public interface State {
+interface State {
 	public void execute();
 }
