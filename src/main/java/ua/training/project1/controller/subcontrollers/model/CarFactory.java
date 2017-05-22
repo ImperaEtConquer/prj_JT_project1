@@ -12,12 +12,11 @@ import static ua.training.project1.view.GlobalConstants.*;
 
 public class CarFactory {
 
-	public Vehicle createCar() {
+	public Vehicle createRandomCar() {
 		return createCar(getRandomType());
 	}
 
 	private Vehicle createCar(String type) {
-
 		Model model = getRandomModelValue();
 		double fuelConsumption = getRandomDoubleValue(DATA_MIN_FUEL, DATA_MAX_FUEL);
 		double velocity = getRandomDoubleValue(DATA_MIN_VELOCITY, DATA_MAX_VELOCITY);
@@ -34,11 +33,11 @@ public class CarFactory {
 	}
 
 	private String getRandomType() {
-		int randomValue = new Random().nextInt(RANDOM_BORDER);
+		int randomValue = new Random().nextInt(RANDOM_VALUES_BORDER);
 
-		if (randomValue == BUSINESS_RANDOM) {
+		if (randomValue == BUSINESS_RANDOM_VALUE) {
 			return CARS_TYPE_BUSINESS;
-		} else if (randomValue == SPORT_RANDOM) {
+		} else if (randomValue == SPORT_RANDOM_VALUE) {
 			return CARS_TYPE_SPORT;
 		} else {
 			return CARS_TYPE_LIMOUSINE;

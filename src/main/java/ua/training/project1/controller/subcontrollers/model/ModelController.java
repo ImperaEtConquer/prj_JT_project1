@@ -1,6 +1,6 @@
 package ua.training.project1.controller.subcontrollers.model;
 
-import ua.training.project1.controller.subcontrollers.input.UserAPI;
+import ua.training.project1.controller.subcontrollers.input.StateController;
 import ua.training.project1.controller.subcontrollers.input.InputController;
 import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
@@ -11,19 +11,20 @@ public class ModelController {
 	private InputController inputController;
 	private CarFactory carFactory;
 
-	public ModelController(InputController inputController, TaxiStation taxiStation) {
+	public ModelController(InputController inputController, TaxiStation taxiStation, View view) {
 		this.inputController = inputController;
-		this.view = inputController.getView();
+		this.view = view;
 		this.taxiStation = taxiStation;
 		this.carFactory = new CarFactory();
 	}
 
 	public void process() {
-		UserAPI api = new UserAPI(inputController, taxiStation, carFactory, view);
+		StateController stateController = new StateController(inputController, taxiStation, carFactory, view);
 		view.printMenu();
 		while (true) {
-			api.setState();
-			api.execute();
+			stateController.setState();
+			stateController.execute();
+			view.printMenu();
 		}
 	}
 

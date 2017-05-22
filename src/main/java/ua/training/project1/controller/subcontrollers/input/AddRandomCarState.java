@@ -18,7 +18,7 @@ class AddRandomCarState implements State {
 
 	@Override
 	public void execute() {
-		taxiStation.addCar(carFactory.createCar());
+		taxiStation.addCar(carFactory.createRandomCar());
 		view.printMessage(MESSAGE_ADD);
 	}
 

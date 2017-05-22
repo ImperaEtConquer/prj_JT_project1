@@ -2,6 +2,7 @@ package ua.training.project1.model.entities;
 
 import ua.training.project1.model.entities.interfaces.TV;
 import static ua.training.project1.view.Symbols.SPACE_SYMBOL;
+import static ua.training.project1.view.GlobalConstants.*;
 
 public class BusinessCar extends Vehicle implements TV {
 	private boolean isTVOn;

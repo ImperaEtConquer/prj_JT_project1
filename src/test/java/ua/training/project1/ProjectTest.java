@@ -32,7 +32,7 @@ public class ProjectTest {
 
 		CarFactory carFactory = new CarFactory();
 		for (int i = 0; i < cars_amount; i++) {
-			cars.add(carFactory.createCar());
+			cars.add(carFactory.createRandomCar());
 		}
 
 		boolean isVelocityInRange = true;
@@ -78,7 +78,7 @@ public class ProjectTest {
 
 		CarFactory carFactory = new CarFactory();
 		for (int i = 0; i < cars_amount; i++) {
-			taxiStation.addCar(carFactory.createCar());
+			taxiStation.addCar(carFactory.createRandomCar());
 		}
 
 		taxiStation.sortByFuelConsumption();

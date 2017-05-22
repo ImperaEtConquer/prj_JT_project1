@@ -22,8 +22,4 @@ public class InputController {
 		return result;
 	}
 
-	public View getView() {
-		return view;
-	}
-
 }

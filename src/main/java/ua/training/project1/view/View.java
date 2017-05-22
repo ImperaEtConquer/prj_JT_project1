@@ -63,7 +63,7 @@ public class View {
 				String[] carInfo = car.toString().split(Symbols.SPACE_SYMBOL);
 				StringBuilder sb = new StringBuilder();
 				for (int index = 0; index < carInfo.length; index++) {
-					if (index < GlobalConstants.NUMERICAL_START_INDEX) {
+					if (index < GlobalConstants.NUMERICAL_DATA_START_INDEX) {
 						sb.append(carInfo[index]);
 					} else {
 						Double value = Double.valueOf(carInfo[index]);
@@ -85,7 +85,7 @@ public class View {
 			String[] carInfo = car.toString().split(Symbols.SPACE_SYMBOL);
 			StringBuilder sb = new StringBuilder();
 			for (int index = 0; index < carInfo.length; index++) {
-				if (index < GlobalConstants.NUMERICAL_START_INDEX) {
+				if (index < GlobalConstants.NUMERICAL_DATA_START_INDEX) {
 					sb.append(carInfo[index]);
 				} else {
 					Double value = Double.valueOf(carInfo[index]);
@@ -129,10 +129,9 @@ public class View {
 		}
 		configBundle = ResourceBundle.getBundle(CONFIG_BUNDLE_NAME, locale);
 		reloadStrings();
-		printMenu();
 	}
 
-	private void reloadStrings() {
+	private void reloadStrings() { //TODO
 		DATA_MIN_PRICE = configBundle.getString("data.cars.price.minimum");
 		DATA_MAX_PRICE = configBundle.getString("data.cars.price.maximum");
 		DATA_MIN_FUEL = configBundle.getString("data.cars.fuel.minimum");

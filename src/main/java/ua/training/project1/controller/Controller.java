@@ -19,7 +19,7 @@ public class Controller {
 	public void processUser() {
 		Scanner sc = new Scanner(System.in);
 		InputController inputController = new InputController(sc, view);
-		ModelController modelController = new ModelController(inputController, model);
+		ModelController modelController = new ModelController(inputController, model, view);
 		modelController.process();
 	}
 
