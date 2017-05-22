@@ -14,14 +14,14 @@ import ua.training.project1.model.entities.Vehicle;
 
 public class ProjectTest {
 
-	final double price_min = 15000;
-	final double price_max = 30000;
+	public final double price_min = 15000;
+	public final double price_max = 30000;
 
-	final double fuel_min = 7;
-	final double fuel_max = 15;
+	public final double fuel_min = 7;
+	public final double fuel_max = 15;
 
-	final double velocity_min = 80;
-	final double velocity_max = 120;
+	public final double velocity_min = 80;
+	public final double velocity_max = 120;
 
 	@Test
 	public void factoryTest() {
@@ -96,10 +96,9 @@ public class ProjectTest {
 		double max = 100;
 		boolean areAllFoundCarsVelocitiesInRange = true;
 		for (Vehicle vehicle : taxiStation.getCarListByParams(min, max)) {
-			if (!taxiStation.getCarListByParams(min, max).isEmpty()) {
-				if (!isDoubleInRange(vehicle.getVelocity(), min, max)) {
-					areAllFoundCarsVelocitiesInRange = false;
-				}
+			if (!taxiStation.getCarListByParams(min, max).isEmpty()
+					&& !isDoubleInRange(vehicle.getVelocity(), min, max)) {
+				areAllFoundCarsVelocitiesInRange = false;
 			}
 		}
 
@@ -117,7 +116,7 @@ public class ProjectTest {
 		boolean isListSorted = true;
 
 		for (int i = 0; i < cars.size() - 1; i++) {
-			if (!(cars.get(i).getFuelConsumption() <= cars.get(i + 1).getFuelConsumption())) {
+			if ((cars.get(i).getFuelConsumption() >= cars.get(i + 1).getFuelConsumption())) {
 				isListSorted = false;
 			}
 		}

@@ -6,7 +6,7 @@ class ExitState implements State {
 
 	@Override
 	public void execute() {
-		System.exit(SYSTEM_STATUS_ZERO);
+		Runtime.getRuntime().exit(SYSTEM_STATUS_ZERO);
 	}
 
 }

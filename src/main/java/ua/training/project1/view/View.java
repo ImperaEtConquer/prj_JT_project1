@@ -131,7 +131,7 @@ public class View {
 		reloadStrings();
 	}
 
-	private void reloadStrings() { //TODO
+	private void reloadStrings() {
 		DATA_MIN_PRICE = configBundle.getString("data.cars.price.minimum");
 		DATA_MAX_PRICE = configBundle.getString("data.cars.price.maximum");
 		DATA_MIN_FUEL = configBundle.getString("data.cars.fuel.minimum");
