@@ -1,6 +1,5 @@
 package ua.training.project1.controller.subcontrollers.input;
 
-import ua.training.project1.controller.subcontrollers.model.CarFactory;
 import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 import static ua.training.project1.view.GlobalConstants.*;
@@ -11,20 +10,18 @@ public class StateController {
 	private State state;
 	private InputController inputController;
 	private TaxiStation taxiStation;
-	private CarFactory carFactory;
 	private View view;
 
-	public StateController(InputController inputController, TaxiStation taxiStation, CarFactory carFactory, View view) {
+	public StateController(InputController inputController, TaxiStation taxiStation, View view) {
 		this.inputController = inputController;
 		this.taxiStation = taxiStation;
-		this.carFactory = carFactory;
 		this.view = view;
 	}
 
 	public void setState() {
 		String userInput = inputController.getString(view.getString(REGEX_MENU));
 		if (isEqual(userInput, MENU_ADD)) {
-			state = new AddRandomCarState(taxiStation, carFactory, view);
+			state = new AddRandomCarState(taxiStation, view);
 		} else if (isEqual(userInput, MENU_SORT)) {
 			state = new SortByFuelState(taxiStation, view);
 		} else if (isEqual(userInput, MENU_PRINT)) {

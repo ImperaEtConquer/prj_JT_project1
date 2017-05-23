@@ -19,3 +19,4 @@
 ## Used patterns
 * Factory
 * State
+* Singleton

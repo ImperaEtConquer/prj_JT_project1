@@ -11,6 +11,19 @@ import static ua.training.project1.view.View.*;
 import static ua.training.project1.view.GlobalConstants.*;
 
 public class CarFactory {
+	
+	private static CarFactory instance;
+	
+	public static CarFactory getInstance() {
+		if (instance == null) {
+			instance = new CarFactory();
+		}
+		return instance;
+	}
+	
+	private CarFactory() {
+		
+	}
 
 	public Vehicle createRandomCar() {
 		return createCar(getRandomType());

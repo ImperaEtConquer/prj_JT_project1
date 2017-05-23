@@ -30,9 +30,8 @@ public class ProjectTest {
 
 		int cars_amount = 1000;
 
-		CarFactory carFactory = new CarFactory();
 		for (int i = 0; i < cars_amount; i++) {
-			cars.add(carFactory.createRandomCar());
+			cars.add(CarFactory.getInstance().createRandomCar());
 		}
 
 		boolean isVelocityInRange = true;
@@ -76,9 +75,8 @@ public class ProjectTest {
 		TaxiStation taxiStation = new TaxiStation();
 		int cars_amount = 1000;
 
-		CarFactory carFactory = new CarFactory();
 		for (int i = 0; i < cars_amount; i++) {
-			taxiStation.addCar(carFactory.createRandomCar());
+			taxiStation.addCar(CarFactory.getInstance().createRandomCar());
 		}
 
 		taxiStation.sortByFuelConsumption();

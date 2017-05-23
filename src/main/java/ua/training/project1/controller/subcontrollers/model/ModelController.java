@@ -17,8 +17,7 @@ public class ModelController {
 	}
 
 	public void process() {
-		CarFactory carFactory = new CarFactory();
-		StateController stateController = new StateController(inputController, taxiStation, carFactory, view);
+		StateController stateController = new StateController(inputController, taxiStation, view);
 		view.printMenu();
 		while (true) {
 			stateController.setState();
