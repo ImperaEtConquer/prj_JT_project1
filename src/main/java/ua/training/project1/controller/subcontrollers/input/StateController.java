@@ -46,7 +46,7 @@ public class StateController {
 	}
 
 	private boolean isEqual(String userInput, String command) {
-		return getFirstCharacter(userInput).equals(command);
+		return userInput.equals(command);
 	}
 
 	private boolean isEqualWithParameters(String userInput, String command) {

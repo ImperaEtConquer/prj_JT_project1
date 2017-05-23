@@ -1,4 +1,4 @@
-# Java Taxi Station MVC
+# Java Taxi Station MVC [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9abf72cb369748979ac32067dd7253ec)](https://www.codacy.com/app/impera.et.conquer/prj_JT_project1?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ImperaEtConquer/prj_JT_project1&amp;utm_campaign=Badge_Grade)
 
 ## Task
 
