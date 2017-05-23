@@ -16,7 +16,7 @@ class ResetState implements State {
 	@Override
 	public void execute() {
 		taxiStation.removeAllCars();
-		view.printMessage(MESSAGE_RESET);
+		view.printKey(MESSAGE_RESET);
 	}
 
 }

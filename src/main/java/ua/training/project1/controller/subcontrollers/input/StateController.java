@@ -22,7 +22,7 @@ public class StateController {
 	}
 
 	public void setState() {
-		String userInput = inputController.getString(REGEX_MENU);
+		String userInput = inputController.getString(view.getString(REGEX_MENU));
 		if (isEqual(userInput, MENU_ADD)) {
 			state = new AddRandomCarState(taxiStation, carFactory, view);
 		} else if (isEqual(userInput, MENU_SORT)) {

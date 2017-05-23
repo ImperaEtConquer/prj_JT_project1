@@ -17,7 +17,7 @@ class SortByFuelState implements State {
 	@Override
 	public void execute() {
 		taxiStation.sortByFuelConsumption();
-		view.printMessage(MESSAGE_SORT);
+		view.printKey(MESSAGE_SORT);
 	}
 
 }

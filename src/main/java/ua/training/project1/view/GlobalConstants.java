@@ -1,6 +1,13 @@
 package ua.training.project1.view;
 
 public interface GlobalConstants {
+	static double DATA_MIN_PRICE = 15000.0;
+	static double DATA_MAX_PRICE =  30000.0;
+	static double DATA_MIN_FUEL = 7.0;
+	static double DATA_MAX_FUEL = 15.0;
+	static double DATA_MIN_VELOCITY = 80.0;
+	static double DATA_MAX_VELOCITY = 120.0;
+	
 	static int NUMERICAL_DATA_START_INDEX = 2;
 
 	static int PARAMETERS_LENGTH = 3;

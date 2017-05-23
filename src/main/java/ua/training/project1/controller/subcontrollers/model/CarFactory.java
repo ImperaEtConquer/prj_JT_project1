@@ -45,10 +45,8 @@ public class CarFactory {
 
 	}
 
-	private double getRandomDoubleValue(String min, String max) {
-		double minValue = Double.parseDouble(min);
-		double maxValue = Double.parseDouble(max);
-		return minValue + (maxValue - minValue) * new Random().nextDouble();
+	private double getRandomDoubleValue(double min, double max) {
+		return min + (max - min) * new Random().nextDouble();
 	}
 
 	private Model getRandomModelValue() {
