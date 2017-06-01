@@ -1,4 +1,4 @@
-package ua.training.project1.controller.subcontrollers.input;
+package ua.training.project1.controller.subcontrollers.state;
 
 import static ua.training.project1.view.GlobalConstants.SYSTEM_STATUS_ZERO;
 

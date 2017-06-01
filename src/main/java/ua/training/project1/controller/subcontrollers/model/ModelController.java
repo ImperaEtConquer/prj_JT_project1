@@ -1,7 +1,7 @@
 package ua.training.project1.controller.subcontrollers.model;
 
-import ua.training.project1.controller.subcontrollers.input.StateController;
 import ua.training.project1.controller.subcontrollers.input.InputController;
+import ua.training.project1.controller.subcontrollers.state.StateController;
 import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 

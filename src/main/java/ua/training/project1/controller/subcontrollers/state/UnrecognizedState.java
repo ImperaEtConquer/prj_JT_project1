@@ -1,4 +1,4 @@
-package ua.training.project1.controller.subcontrollers.input;
+package ua.training.project1.controller.subcontrollers.state;
 
 import ua.training.project1.view.View;
 

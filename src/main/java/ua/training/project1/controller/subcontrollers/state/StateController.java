@@ -1,9 +1,12 @@
-package ua.training.project1.controller.subcontrollers.input;
+package ua.training.project1.controller.subcontrollers.state;
 
 import ua.training.project1.model.TaxiStation;
 import ua.training.project1.view.View;
 import static ua.training.project1.view.GlobalConstants.*;
 import static ua.training.project1.view.View.*;
+
+import ua.training.project1.controller.subcontrollers.input.InputController;
+
 import static ua.training.project1.view.Symbols.*;
 
 public class StateController {
